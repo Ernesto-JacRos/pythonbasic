@@ -77,3 +77,49 @@ print(lista_enteros)
 
 print('Longitud de la lista: ', len(lista_enteros))
 
+# Ordenar Lista en python 
+print('Ordenar listas modificando la original ')
+#sort() no devuelve nada y por eso modifica internamente la listra
+numbers = [2,4,6,8,3435,23,-1,0]
+print(numbers)
+numbers.sort()
+print(numbers)
+
+print('Ordenar listas creando un original')
+# devuelve una lista (la copia ) y conservas la original
+#el metodo la devuelve y la puede guardar en un avariable
+numbers = [2,4,6,8,3435,23,-1,0]
+lista_ordenada = sorted(numbers)
+print(numbers)
+print(lista_ordenada)
+
+# Odenar Cadenas de texto
+print("Odenar cadenas de texto todo en nimusculas")
+
+lista_str = ['manzana', 'pera', 'limon', 'manzana', 'pera','limon']
+frutas_ordenadad = sorted(lista_str)
+print(frutas_ordenadad)
+
+print('Comparacion con mayuscula y minusculas')
+print('tiene un orden distinto porque ordena po mayusculas ')
+lista_str = ['manzana', 'Pera', 'Limon', 'manzana', 'pera','limon']
+mix_frutas = sorted(lista_str)
+print(mix_frutas)
+print()
+print('se hace la comparacion pero todas tomadas como minusculas')
+# Se hace con sort un que la comparacion se hace con lowercase, 
+# no modifica la cadena en si 
+print()
+mix_frutas.sort(key=str.lower)
+print(mix_frutas)
+print()
+
+#Mas metodos
+
+lista_enteros: list[int] = [1, 2, 3, 4, 5,6, 7, 8, 1,1]#[1, 2, 3, 4, 5]
+
+print('Tamanho de la lista ', len(lista_enteros)) ##Tamanho de la lista
+print('Cuantas veces aparace el 1 en lista enteros: ', lista_enteros.count(1)) ##Cuantas veces aparace el elemento 
+##para saber si un elemento esta dentro de la lista 
+print(1 in lista_enteros)## devuelve un booleao 
+
